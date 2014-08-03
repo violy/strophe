@@ -6,15 +6,18 @@
 
 	<title>| strophe | haïku interactif de Arthur Violy et Loïc Baron</title>
 
-	<meta name="description" content="haïku interactif, une expérience web vidéo et interactive de Arthur Violy et Loïc Baron, suite à l’appel à projet  ONF + arte" />
+	<meta name="description" content="haïku interactif, expérience web, vidéo et interactive, de Arthur Violy et Loïc Baron" />
 
-	<link href="styles/main.css" rel="stylesheet" />
-	<script src="js/lib/require.js"></script>
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta property="og:site_name" content="strophe.io"/>
+	<meta property="og:type" content="video.other"/>
+	<meta property="og:title" content="strophe | haïku interactif de Arthur Violy et Loïc Baron"/>
+	<meta property="og:description" content="haïku interactif, une expérience web vidéo et interactive de Arthur Violy et Loïc Baron"/>
+	<meta property="og:image" content="http://strophe.io/favicons/facebook.jpg"/>
+	<meta property="og:locale " content="fr_FR"/>
 
-	<meta property="og:title" content="| strophe | haïku interactif de Arthur Violy et Loïc Baron"/>
-	<meta property="og:description" content="haïku interactif, une expérience web vidéo et interactive de Arthur Violy et Loïc Baron, suite à l’appel à projet  ONF + arte"/>
-	<meta property="og:image" content="http://strophe.io/i/plante/4/0.jpg"/>
+	<meta property="og:video:duration" content="60"/>
+	<meta property="og:video:director" content="https://www.facebook.com/arthur.violy"/>
+	<meta property="og:video:director " content="https://www.facebook.com/arthur.violy"/>
 
 	<link rel="shortcut icon" href="/favicons/favicon.ico">
 	<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
@@ -36,9 +39,78 @@
 	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
 	<meta name="application-name" content="strophe">
 
+	<!-- Run in full-screen mode. -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- Make the status bar black with white text. -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- Customize home screen title. -->
+	<meta name="apple-mobile-web-app-title" content="strophe">
+
+	<!-- Disable phone number detection. -->
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Prevent text size adjustment on orientation change. -->
+	<style>html {
+		-webkit-text-size-adjust: 100%;
+	}</style>
+
+	<!-- Startup images -->
+
+	<!-- iOS 6 & 7 iPad (retina, portrait) -->
+	<link href="/i/app/apple-touch-startup-image-1536x2008.png"
+	      media="(device-width: 768px) and (device-height: 1024px)
+                 and (orientation: portrait)
+                 and (-webkit-device-pixel-ratio: 2)"
+	      rel="apple-touch-startup-image">
+
+	<!-- iOS 6 & 7 iPad (retina, landscape) -->
+	<link href="/i/app/apple-touch-startup-image-1496x2048.png"
+	      media="(device-width: 768px) and (device-height: 1024px)
+                 and (orientation: landscape)
+                 and (-webkit-device-pixel-ratio: 2)"
+	      rel="apple-touch-startup-image">
+
+	<!-- iOS 6 iPad (portrait) -->
+	<link href="/i/app/apple-touch-startup-image-768x1004.png"
+	      media="(device-width: 768px) and (device-height: 1024px)
+                 and (orientation: portrait)
+                 and (-webkit-device-pixel-ratio: 1)"
+	      rel="apple-touch-startup-image">
+
+	<!-- iOS 6 iPad (landscape) -->
+	<link href="/i/app/apple-touch-startup-image-748x1024.png"
+	      media="(device-width: 768px) and (device-height: 1024px)
+                 and (orientation: landscape)
+                 and (-webkit-device-pixel-ratio: 1)"
+	      rel="apple-touch-startup-image">
+
+	<!-- iOS 6 & 7 iPhone 5 -->
+	<link href="/i/app/apple-touch-startup-image-640x1096.png"
+	      media="(device-width: 320px) and (device-height: 568px)
+                 and (-webkit-device-pixel-ratio: 2)"
+	      rel="apple-touch-startup-image">
+
+	<!-- iOS 6 & 7 iPhone (retina) -->
+	<link href="/i/app/apple-touch-startup-image-640x920.png"
+	      media="(device-width: 320px) and (device-height: 480px)
+                 and (-webkit-device-pixel-ratio: 2)"
+	      rel="apple-touch-startup-image">
+
+	<!-- iOS 6 iPhone -->
+	<link href="/i/app/apple-touch-startup-image-320x460.png"
+	      media="(device-width: 320px) and (device-height: 480px)
+                 and (-webkit-device-pixel-ratio: 1)"
+	      rel="apple-touch-startup-image">
+
+	<link href="styles/main.css" rel="stylesheet"/>
+	<script src="js/lib/require.js"></script>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+	<!-- Google Analytics -->
 	<script>
 
-		// Google Analytics
 		(function (i, s, o, g, r, a, m) {
 			i['GoogleAnalyticsObject'] = r;
 			i[r] = i[r] || function () {
@@ -54,22 +126,25 @@
 		ga('create', 'UA-53475127-1', 'auto');
 		ga('send', 'pageview');
 
-		// RequireJS
+	</script>
+
+	<!-- RequireJS -->
+	<script>
+
+		//
 		define('SITE_CONST', {});
 		define('GoogleAnalytics',ga);
 
 		require.config({
 			baseUrl: 'js/',
 			paths: {
-				//	"main": "main-built"
+				"main": "main-built"
 			}
 		});
 
 		require(["main"], function (main) {
 			//
 		});
-
-
 
 	</script>
 </head>
@@ -100,9 +175,13 @@
 		<div class="inter-titre">strophe<div class="folio">1</div></div>
 		<div class="generique">
 			<div class="block">
+			<h2>strophe</h2>
+			<p>haïku intéractif<br/>interactive haiku</p>
+			<p>de / by</p>
 			<h2>
 				Arthur Violy
 			</h2>
+			<p>et / and</p>
 			<h2>
 				Loic Baron
 			</h2>
