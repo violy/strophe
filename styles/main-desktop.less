@@ -1,0 +1,48 @@
+.no-touch{
+
+  #stage{
+    width:320px;
+    height:480px;
+    top:0; left:0; right:0; bottom:0; margin:auto;
+    &:before {
+      @bordersize: 8px;
+      content: ' ';
+      width: 100%;
+      height: 100%;
+      padding: @bordersize;
+      .border-radius(@bordersize);
+      background: #000;
+      position: absolute;
+      top: (-@bordersize);
+      left: (-@bordersize);
+      box-shadow: 0 0 128px #666;
+    }
+
+    &, & #picture {
+      transition:transform .5s;
+      -webkit-transition:-webkit-transform .5s;
+    }
+
+    &.landscape {
+      .transform(rotate(90deg));
+      #picture,
+      .inter-titre,
+      .generique .block{
+        .transform(rotate(-90deg));
+      }
+
+      .title-wrapper{
+        //.transform(rotate(-90deg));
+      }
+
+      #prologue.tutorial {
+        .title {
+          h3{
+            top:0;
+          }
+        }
+      }
+    }
+  }
+
+}

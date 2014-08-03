@@ -1,0 +1,283 @@
+@font-face {
+  font-family: "KoushikiSans";
+  src: url("KoushikiSans/KoushikiSans-Regular.eot");
+  src: url("KoushikiSans/KoushikiSans-Regular.woff");
+  src: url("KoushikiSans/KoushikiSans-Regular.ttf");
+  src: local('☺︎'), url("KoushikiSans/KoushikiSans-Regular.otf") format('opentype');
+}
+@font-face {
+  font-family: "KoushikiSansLight";
+  src: url("KoushikiSans/KoushikiSans-Light.woff");
+  src: url("KoushikiSans/KoushikiSans-Light.ttf");
+  src: local('☺︎'), url("KoushikiSans/KoushikiSans-Light.otf") format('opentype');
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #111;
+  font-family: "KoushikiSans";
+}
+#picture {
+  float: left;
+}
+#picture canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#stage {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+#picture {
+  width: 100%;
+  height: 100%;
+}
+#stage {
+  position: absolute;
+}
+#viewport {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px transparent;
+  z-index: 1;
+}
+#prologue {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 10;
+}
+#prologue .title-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+}
+#prologue .title {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 48px;
+  width: 280px;
+  margin: auto;
+  text-align: center;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  display: inline-block;
+  overflow: hidden;
+}
+#prologue .title h3,
+#prologue .title h1 {
+  font-size: 2em;
+}
+#prologue .title h1,
+#prologue .title h3 {
+  background: #fff;
+  font-family: "KoushikiSans";
+  display: inline-block;
+  position: relative;
+  font-weight: normal;
+  top: 0px;
+}
+#prologue .title h3 {
+  position: absolute;
+  width: 280px;
+  left: 0;
+  top: -40px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  cursor: pointer;
+}
+#prologue .title h3 span {
+  float: left;
+}
+#prologue .title span {
+  font-family: 'KoushikiSansLight';
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  color: #000;
+  line-height: 40px;
+  text-align: center;
+}
+#tutorial {
+  background: url('../i/intro-background.jpg') no-repeat center center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -240px 0 0 -160px;
+}
+#loader {
+  top: 100%;
+  margin: -4px auto;
+  width: 100%;
+  background: #000;
+}
+#loader .progress,
+#loader {
+  height: 4px;
+  position: absolute;
+}
+#loader .progress {
+  width: 0%;
+  background: #fff;
+}
+.inter-titre {
+  width: 320px;
+  height: 60px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  font-family: 'KoushikiSansLight';
+  font-size: 2em;
+  text-align: center;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  opacity: 0;
+}
+.inter-titre .folio {
+  font-family: 'KoushikiSans';
+  display: block;
+  border-radius: 40px;
+  background: #fff;
+  color: #000;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+  padding: 3px 0 0 3px;
+  box-sizing: border-box;
+}
+.inter-titre.visible {
+  opacity: 1;
+}
+.generique {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  font-family: 'KoushikiSansLight';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 13;
+  font-size: 1em;
+  transition: 2s;
+  -webkit-transition: 2s;
+  opacity: 0;
+  visibility: hidden;
+}
+.generique .block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 80px;
+  margin: -40px 0 0 -160px;
+}
+.generique h2 {
+  font-size: 2em;
+  text-align: center;
+  line-height: 40px;
+}
+.generique.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.no-touch #stage {
+  width: 320px;
+  height: 480px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.no-touch #stage:before {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  background: #000;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  box-shadow: 0 0 128px #666;
+}
+.no-touch #stage,
+.no-touch #stage #picture {
+  transition: transform .5s;
+  -webkit-transition: -webkit-transform 0.5s;
+}
+.no-touch #stage.landscape {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+.no-touch #stage.landscape #picture,
+.no-touch #stage.landscape .inter-titre,
+.no-touch #stage.landscape .generique .block {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+.no-touch #stage.landscape #prologue.tutorial .title h3 {
+  top: 0;
+}
+.touchhtml,
+.touch body {
+  overflow: hidden;
+}
+@media only screen and (orientation: landscape) {
+  .touch {
+    /*
+      #prologue {
+        .transform(rotate(90deg));
+        h1 {
+          .transform(rotate(90deg));
+        }
+        &.tutorial{
+          h3{
+            top:0;
+          }
+        }
+      }*/
+  
+  }
+  .touch #tutorial {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
+  .touch .title-wrapper {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
+  .touch #prologue.tutorial .title h3 {
+    top: 0;
+  }
+}

@@ -1,0 +1,78 @@
+{
+	"clipIndex":0,
+	"clips":[
+		{
+			"id": "seq3-0",
+			"name":"sake intro",
+			"path": "i/sake/0bis/",
+			"images":11,
+			"loops":6,
+			"end":"loop",
+			"align_vertical":0.5
+		},
+		{
+			"id":"seq3-1",
+			"name":"sake intro arrivée",
+			"path": "i/sake/1/",
+			"images":105,
+			"align_vertical": 0.5
+		},
+		{
+			"id": "seq3-2",
+			"name": "versement sake",
+			"path": "i/sake/2/",
+			"images":31,
+			"align_vertical": 0.8
+		},
+		{
+			"id": "seq3-3",
+			"name": "prise du verre",
+			"path": "i/sake/3/",
+			"images":35,
+			"align_horizontal": 0.8
+		},
+		{
+			"id": "seq3-4",
+			"name": "plan face extérieur",
+			"path": "i/sake/4/",
+			"images":37,
+			"align_horizontal": 0,
+			"align_vertical": 0.25
+		},
+		{
+			"id": "seq3-5",
+			"name": "plan rapproché",
+			"path": "i/sake/5/",
+			"images":60,
+			"align_vertical": 0.5
+		},
+		{
+			"id": "seq3-5bis",
+			"name": "plan rapproché avant interaction",
+			"path": "i/sake/5bis/",
+			"run_mode": "yoyo",
+			"end": "orientation_portrait",
+			"images":3,
+			"fps":6,
+			"align_vertical": 0.5
+		},
+		{
+			"id": "seq3-6",
+			"name": "plan boisson",
+			"path": "i/sake/6/",
+			"images":102,
+			"align_vertical": 0.5
+		},
+		{
+			"id": "seq3-7",
+			"name": "plan boisson inverse",
+			"path": "i/sake/7/",
+			"images":95,
+			"align_vertical": 0.5,
+			"fadeOut":{
+				"delay":2660,
+				"duration":500
+			}
+		}
+	]
+}

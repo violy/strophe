@@ -1,0 +1,235 @@
+//
+@stage_width : 320px;
+@stage_height : 480px;
+@picture_width : @stage_height;
+
+@font-face {
+  font-family: "KoushikiSans";
+  src: url("KoushikiSans/KoushikiSans-Regular.eot");
+  src: url("KoushikiSans/KoushikiSans-Regular.woff");
+  src: url("KoushikiSans/KoushikiSans-Regular.ttf");
+  src: local('☺︎'), url("KoushikiSans/KoushikiSans-Regular.otf") format('opentype');
+}
+@font-face {
+  font-family: "KoushikiSansLight";
+  src: url("KoushikiSans/KoushikiSans-Light.woff");
+  src: url("KoushikiSans/KoushikiSans-Light.ttf");
+  src: local('☺︎'), url("KoushikiSans/KoushikiSans-Light.otf") format('opentype');
+}
+
+@import "mixin";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html,body{
+  width:100%;
+  height:100%;
+  position: relative;
+  background:#111;
+  font-family: "KoushikiSans";
+}
+
+#picture{
+  float: left;
+  canvas{
+    position: absolute;
+    top:0;
+    left:0;
+  }
+}
+
+#stage {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+#picture {
+  width: 100%;
+  height: 100%;
+}
+
+#stage{
+  position: absolute;
+}
+
+#viewport {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px transparent;
+  z-index: 1;
+}
+
+#prologue{
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  text-align: center;
+  z-index: 10;
+  .title-wrapper{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    .transition(transform .5s);
+  }
+  .title{
+    position: absolute;
+    top:0px;
+    left:0;
+    right: 0;
+    bottom: 0;
+    height:48px;
+    width:280px;
+    margin: auto;
+    text-align: center;
+    .transform(rotate(90deg));
+    .transition(.1s);
+    display: inline-block;
+    //display: none;
+
+    overflow: hidden;
+    h3,h1{
+      font-size: 2em;
+    }
+    h1,h3{
+      background: #fff;
+      font-family: "KoushikiSans";
+      display: inline-block;
+      position: relative;
+      font-weight: normal;
+      top: 0px;
+    }
+    h1{
+    }
+    h3{
+      position: absolute;
+      width:280px;
+      left:0;
+      top:-40px;
+      .transition(.5s);
+      cursor: pointer;
+      span{
+        float: left;
+      }
+    }
+    span{
+      font-family: 'KoushikiSansLight';
+      display: inline-block;
+      width:40px;
+      height: 40px;
+      color:#000;
+      line-height: 40px;
+      text-align: center;
+    }
+  }
+}
+#tutorial{
+  background: url('../i/intro-background.jpg') no-repeat center center;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin: -240px 0 0 -160px;
+}
+
+#loader{
+
+  top:100%;
+  margin: -4px auto;
+  width: 100%;
+  background: #000;
+  .progress, &{
+  height: 4px;
+  position: absolute;
+}
+.progress{
+  width: 0%;
+  background: #fff;
+  //.transition(1s);
+}
+}
+
+.inter-titre{
+  width:320px;
+  height:60px;
+  color:#fff;
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  margin: auto;
+  font-family: 'KoushikiSansLight';
+  text-align: center;
+  font-size: 2em;
+  //z-index: 11;
+  text-align: center;
+  .transition(.5s);
+  .folio{
+    font-family: 'KoushikiSans';
+    display: block;
+    border-radius:40px;
+    background: #fff;
+    color:#000;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    left:0;
+    right:0;
+    text-align: center;
+    margin: auto;
+    padding: 3px 0 0 3px;
+    box-sizing: border-box;
+  }
+  //visibility: hidden;
+  opacity: 0;
+  &.visible{
+    //visibility: visible;
+    opacity: 1;
+  }
+}
+
+.generique{
+  width:100%;
+  height:100%;
+  background:#000;
+  color:#fff;
+  font-family: 'KoushikiSansLight';
+  position: absolute;
+  top: 0;
+  left:0;
+  z-index: 13;
+  font-size: 1em;
+  .block{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 320px;
+    height: 80px;
+    margin: -40px 0 0 -160px;
+  }
+  h2{
+    font-size: 2em;
+    text-align: center;
+    line-height: 40px;
+    //text-transform: uppercase;
+  }
+  .transition(2s);
+  opacity: 0;
+  visibility: hidden;
+  &.visible{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@import "main-desktop";
+@import "main-mobile";

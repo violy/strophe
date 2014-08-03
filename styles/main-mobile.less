@@ -1,0 +1,44 @@
+//
+//.touch{
+
+.touch{
+  &html,body{
+    overflow: hidden;
+  }
+}
+
+//}
+
+@media only screen and (orientation: landscape) {
+  .touch{
+    #tutorial{
+      //.transform-origin(0,0);
+      .transform(rotate(90deg))
+    }
+
+    .title-wrapper {
+      .transform(rotate(90deg));
+    }
+
+    #prologue.tutorial{
+
+      .title {
+      h3 {
+          top: 0;
+        }
+      }
+    }
+    /*
+    #prologue {
+      .transform(rotate(90deg));
+      h1 {
+        .transform(rotate(90deg));
+      }
+      &.tutorial{
+        h3{
+          top:0;
+        }
+      }
+    }*/
+  }
+}

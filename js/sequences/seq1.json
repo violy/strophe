@@ -1,0 +1,83 @@
+{
+	"clipIndex":0,
+	"clips":[
+		{
+			"id": "seq1-0",
+			"name":"plante - introduction",
+			"path": "i/plante/0/",
+			"images":8,
+			"end":"loop",
+			"loops":10,
+			"align_vertical": 0.2
+		},
+		{
+			"id": "seq1-1",
+			"name":"plante - introduction depart",
+			"path": "i/plante/1/",
+			"images":30,
+			"align_vertical": 0.2
+		},
+		{
+			"id": "seq1-2",
+			"name": "plante - boule à thé",
+			"path": "i/plante/2/",
+			"images":34,
+			"align_vertical": 0.7
+		},
+		{
+			"id": "seq1-3",
+			"name":"plante - plongée",
+			"path": "i/plante/3/",
+			"images":51,
+			"align_vertical": 0.9
+		},
+		{
+			"id": "seq1-3-bis",
+			"name":"plante - plongée fin",
+			"path": "i/plante/3bis/",
+			"fps":20,
+			"images":17,
+			"align_vertical": 0.9
+		},
+		{
+			"id": "seq1-4",
+			"name":"plante - interaction",
+			"path": "i/plante/4/",
+			"images":3,
+			"run_mode": "random",
+			"fps":8,
+			"end": "orientation_portrait",
+			"align_vertical": 0.9
+		},
+		{
+			"id": "seq1-5",
+			"name": "plante - chute",
+			"path": "i/plante/5/",
+			"images": 213
+		},
+		{
+			"id": "seq1-6",
+			"name": "plante - finale 1",
+			"path": "i/plante/6/",
+			"images": 236
+		},
+		{
+			"id": "seq1-7",
+			"name": "plante - finale 2",
+			"path": "i/plante/7/",
+			"fps":20,
+			"images": 6
+		},
+		{
+			"id": "seq1-8",
+			"name": "plante - finale 3",
+			"path": "i/plante/8/",
+			"fps":8,
+			"images": 4,
+			"fadeOut":{
+				"delay":0,
+				"duration":500
+			}
+		}
+	]
+}

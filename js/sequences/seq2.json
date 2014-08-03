@@ -1,0 +1,57 @@
+{
+	"clipIndex":0,
+	"clips":[
+		{
+			"id": "seq2-0",
+			"name":"fontaine - introduction",
+			"path": "i/fontaine/0/",
+			"images":63,
+			"align_horizontal":0.3
+		},
+		{
+			"id": "seq2-1",
+			"name":"fontaine - remplissage",
+			"path": "i/fontaine/1/",
+			"images":96,
+			"align_horizontal": 0.3
+		},
+		{
+			"id": "seq2-2",
+			"name":"fontaine - cowboy",
+			"path": "i/fontaine/2/",
+			"images":52,
+			"align_horizontal": 0
+		},
+		{
+			"id": "seq2-2bis",
+			"name":"fontaine - attente",
+			"path": "i/fontaine/2bis/",
+			"images":2,
+			"run_mode":"yoyo",
+			"fps":10,
+			"end": "orientation_landscape",
+			"align_horizontal":0.4,
+			"align_vertical": 0.2
+		},
+		{
+			"id": "seq2-3",
+			"name":"fontaine - versement gros plan",
+			"path": "i/fontaine/3/",
+			"images":44,
+			"align_horizontal":0.2,
+			"align_vertical": 0.2
+		},
+		{
+			"id": "seq2-4",
+			"name":"fontaine - versement plan large",
+			"path": "i/fontaine/4/",
+			"images":125,
+			"align_horizontal": 0.1,
+			"align_vertical": 0.5,
+			"fadeOut":{
+				"delay":3160,
+				"duration":500
+			}
+		}
+	]
+}
