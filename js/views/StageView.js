@@ -20,7 +20,7 @@ define(['underscore', 'jquery', 'backbone','views/PictureView','views/TutorialVi
 			//
 			if(Modernizr.touch){
 				// on Touch device, detect initial orientation
-				this.orientation = $(window).width > $(window).height ? 'portrait':'landscape';
+				this.orientation = $(window).width < $(window).height ? 'portrait':'landscape';
 			}
 			//
 			this.tutorialView = new TutorialView();
